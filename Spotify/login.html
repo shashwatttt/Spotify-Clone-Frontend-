@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify- Login</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: black;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            /* height: 100vh; */
+            height: max-content;
+            max-width: 390px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #1ed760;
+            color: black;
+            border: 0px;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3de377;
+            color: black;
+        }
+
+        .social-login {
+            margin-top: 20px;
+        }
+
+        .social-login a {
+            box-sizing: border-box;
+            margin-bottom: 8px;
+            font-weight: bold;
+            padding: 5px;
+            -webkit-tap-highlight-color: transparent;
+            font-size: 1rem;
+            font-weight: 700;
+            background-color: transparent;
+            border-radius: 9999px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            text-transform: none;
+            touch-action: manipulation;
+            transition-duration: 33ms;
+            transition-property: background-color, border-color, color, box-shadow,
+                filter, transform;
+            user-select: none;
+            vertical-align: middle;
+            transform: translate3d(0px, 0px, 0px);
+            position: relative;
+            border: 1px solid var(--essential-subdued, #878787);
+            color: var(--text-base, #000000);
+            min-inline-size: 0px;
+            min-block-size: var(--encore-control-size-base, 48px);
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            inline-size: 100%;
+        }
+
+        .social-login a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .social-login svg {
+            margin-top: 2px;
+            margin-left: -8px;
+        }
+
+        .social-login svg .apple {
+            margin-top: -2px;
+        }
+
+        .already-have-account {
+            text-align: center;
+            margin-top: -94px;
+            font-size: 0.8em;
+        }
+
+        .already-have-account a {
+            color: #4385f4;
+            text-decoration: underline;
+        }
+
+        .already-have-account a:hover {
+            text-decoration: underline;
+        }
+
+        .phonenumber a {
+            color: #1eb22b;
+            text-decoration: none;
+        }
+
+        .footerline {
+            text-align: center;
+            margin-top: 48px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .check {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftside">
+            <div class="homebox bg-gray rounded m-1 p-1">
+                <div class="logo" style="text-align: center">
+                    <img onclick="window.location.href='index.html'" class="invert" src="svg/logo.svg"
+                        alt="spotify logo" />
+                </div>
+            </div>
+        </div>
+        <h1> Log in to Spotify</h1>
+
+        <div class="social-login">
+            <a data-testid="idp-button-google"
+                href="https://accounts.spotify.com/en/login?method=google&amp;continue=https%3A%2F%2Fopen.spotify.com%2F%3Fflow_ctx%3D6c64d6ea-b4ed-4edb-a407-e8644a074043%253A1712916954&amp;intent=signup&amp;creation_point=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D52a704cb-ef88-4b2e-a931-f6501fefbc05%26device%3Ddesktop&amp;flow_ctx=6c64d6ea-b4ed-4edb-a407-e8644a074043%3A1712916954"
+                data-encore-id="buttonSecondary" class="Button-sc-y0gtbx-0 cumZKt"><span aria-hidden="true"
+                    class="IconWrapper__Wrapper-sc-ihacte-0 lenTmt"><svg width="25" height="24" viewBox="0 0 25 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22.1 12.2272C22.1 11.5182 22.0364 10.8363 21.9182 10.1818H12.5V14.05H17.8818C17.65 15.3 16.9455 16.3591 15.8864 17.0682V19.5772H19.1182C21.0091 17.8363 22.1 15.2727 22.1 12.2272Z"
+                            fill="#4285F4"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.4998 21.9999C15.1998 21.9999 17.4635 21.1045 19.118 19.5772L15.8862 17.0681C14.9907 17.6681 13.8453 18.0227 12.4998 18.0227C9.89529 18.0227 7.69075 16.2636 6.90439 13.8999H3.56348V16.4908C5.20893 19.759 8.59075 21.9999 12.4998 21.9999Z"
+                            fill="#34A853"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.90455 13.9C6.70455 13.3 6.59091 12.6591 6.59091 12C6.59091 11.3409 6.70455 10.7 6.90455 10.1V7.50909H3.56364C2.88636 8.85909 2.5 10.3864 2.5 12C2.5 13.6136 2.88636 15.1409 3.56364 16.4909L6.90455 13.9Z"
+                            fill="#FBBC05"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.4998 5.97727C13.968 5.97727 15.2862 6.48182 16.3226 7.47273L19.1907 4.60455C17.4589 2.99091 15.1953 2 12.4998 2C8.59075 2 5.20893 4.24091 3.56348 7.50909L6.90439 10.1C7.69075 7.73636 9.89529 5.97727 12.4998 5.97727Z"
+                            fill="#EA4335"></path>
+                    </svg></span>Continue with Google</a>
+            <a href="https://accounts.spotify.com/en/login?method=facebook&amp;continue=https%3A%2F%2Fopen.spotify.com%2Fsearch%3Fflow_ctx%3D631c5ea9-7bf6-4915-9ea7-d8609761fae6%253A1712840154&amp;intent=signup&amp;creation_point=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D52a704cb-ef88-4b2e-a931-f6501fefbc05%26device%3Ddesktop&amp;flow_ctx=631c5ea9-7bf6-4915-9ea7-d8609761fae6%3A1712840154"
+                data-testid="idp-button-facebook" data-encore-id="buttonSecondary" id="facebook-sign-up"><span
+                    aria-hidden="true" class="IconWrapper__Wrapper-sc-ihacte-0 lenTmt"><svg class="fb" width="25"
+                        height="24" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.5" cy="12" r="10" fill="white"></circle>
+                        <path
+                            d="M22.5 12C22.5 6.477 18.023 2 12.5 2C6.977 2 2.5 6.477 2.5 12C2.5 16.991 6.157 21.128 10.938 21.878V14.891H8.398V12H10.938V9.797C10.938 7.291 12.43 5.907 14.715 5.907C15.808 5.907 16.953 6.102 16.953 6.102V8.562H15.693C14.45 8.562 14.063 9.333 14.063 10.125V12H16.836L16.393 14.89H14.063V21.878C18.843 21.128 22.5 16.991 22.5 12Z"
+                            fill="#1877F2"></path>
+                    </svg></span>Continue with Facebook</a>
+            <a data-testid="idp-button-apple"
+                href="https://accounts.spotify.com/en/login?method=apple&amp;continue=https%3A%2F%2Fopen.spotify.com%2F%3Fflow_ctx%3D6c64d6ea-b4ed-4edb-a407-e8644a074043%253A1712916954&amp;intent=signup&amp;creation_point=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D52a704cb-ef88-4b2e-a931-f6501fefbc05%26device%3Ddesktop&amp;flow_ctx=6c64d6ea-b4ed-4edb-a407-e8644a074043%3A1712916954"
+                data-encore-id="buttonSecondary" class="Button-sc-y0gtbx-0 cumZKt"><span aria-hidden="true"
+                    class="IconWrapper__Wrapper-sc-ihacte-0 lenTmt"><svg class="apple"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 25" width="24" height="24" color="#000000"
+                        fill="none">
+                        <path
+                            d="M15.1773 5.17735C14.0936 6.26107 12.0378 5.96225 12.0378 5.96225C12.0378 5.96225 11.7389 3.90637 12.8227 2.82265C13.9064 1.73893 15.9622 2.03775 15.9622 2.03775C15.9622 2.03775 16.2611 4.09363 15.1773 5.17735Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M4 14.0593C4 17.341 6.19645 21.1103 8.41889 21.9069C9.1894 22.183 9.98578 21.8019 10.6479 21.3274C11.1502 20.9674 11.7584 20.6236 12.2497 20.6236C12.7409 20.6236 13.3491 20.9674 13.8514 21.3274C14.5135 21.8019 15.3099 22.183 16.0804 21.9069C17.6597 21.3409 19.2258 19.2738 20 16.9473C18.5008 16.5179 17.4057 15.1614 17.4057 13.5544C17.4057 12.0821 18.3248 10.8201 19.6318 10.2886C18.7897 8.79309 17.4136 8 15.8589 8C15.0546 8 14.3154 8.32422 13.7183 8.71286C12.7653 9.33314 11.7341 9.33315 10.781 8.71286C10.1839 8.32422 9.44473 8 8.64044 8C6.07759 8 4 10.1551 4 14.0593Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg> </span>Continue with Apple</a>
+            <a data-testid="idp-button-apple"
+                href="https://accounts.spotify.com/en/login/phone?intent=signup&continue=https%3A%2F%2Fopen.spotify.com%2F%3Fflow_ctx%3D6c64d6ea-b4ed-4edb-a407-e8644a074043%253A1712916954&flow_ctx=5f2a0389-a851-4f86-a288-d57090f4d6d7:1712953137&creation_point=https://open.spotify.com/?sp_cid=52a704cb-ef88-4b2e-a931-f6501fefbc05&device=desktop"
+                data-encore-id="buttonSecondary" class="Button-sc-y0gtbx-0 cumZKt"></span>Continue with phone number</a>
+        </div>
+
+        <div style="text-align: center; margin: 20px 0">
+            <hr style="
+            border-top: 1px solid black;
+            width: 35%;
+            display: inline-block;
+            margin: 3px 5px;
+          " />
+            <span style="font-weight: bold; color: black; padding: 5px">or</span>
+            <hr style="
+            border-top: 1px solid black;
+            width: 35%;
+            display: inline-block;
+            margin: 3px 5px;
+          " />
+        </div>
+
+        <form>
+            <label for="email" style="font-size: 14px">Email or Username</label>
+            <input type="email" id="email" name="email" required autofocus placeholder="Email or Username " />
+
+            <label for="password" style="font-size: 14px">Password</label>
+            <input type="password" id="password" placeholder="Password">
+
+            <div>
+                <label class="check" style="font-size: 14px">
+                    <input type="checkbox">
+                    <span>
+                        <p>Remember me</p>
+                    </span>
+                </label>
+            </div>
+
+            <input onclick="window.location.href='user.html'" type="submit" value="Log in" />
+        </form>
+
+        <div class="account" style="text-align: center; font-size: 12px;">
+            <a href="reset.html">
+                <p>Forgot your password?</p>
+            </a>
+            <div class="already-have-account" style="margin-top: -1px; font-size: 12px;">
+                Don't have an account?
+                <a href="signup.html">Sign up for Spotify</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span>
+            <p class="footerline" style="font-size: 12px" data-encore-id="text">
+                This site is protected by reCAPTCHA & Google's<br /><a href="https://policies.google.com/privacy"
+                    target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <!-- -->and<!-- -->
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of
+                    Service</a>
+                <!-- -->apply.
+            </p>
+        </span>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

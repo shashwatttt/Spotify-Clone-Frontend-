@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: black;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 85vh;
+            max-width: 390px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"],
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #1ed760;
+            color: black;
+            border: 0px;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3de377;
+            color: black;
+        }
+
+        .footerline {
+            text-align: center;
+            margin-top: -132px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container invert">
+        <div class="leftside">
+            <div class="homebox bg-gray rounded m-1 p-1">
+                <div class="logo" style="text-align: center">
+                    <img onclick="window.location.href='index.html'" class="invert" src="svg/logo.svg"
+                        alt="spotify logo" />
+                </div>
+            </div>
+        </div>
+        <h1>Reset your password</h1>
+        <h3>Enter your email address or username, and we'll send you a link to get back into your account.</h3>
+
+        <form>
+            <label for="email" style="font-size: 14px">Email address or Username</label>
+            <input type="email" id="email" name="email" required autofocus placeholder="Email or Username " />
+            <a href="https://support.spotify.com/article/reset-password/" style="font-size: 12px;" target="_blank">Need
+                support?</a>
+
+            <input type="submit" value="Send Link" />
+            <button type="submit" onclick="window.location.href='login.html'">Back to Login</button>
+        </form>
+
+    </div>
+
+    <footer>
+        <span>
+            <p class="footerline" style="font-size: 12px" data-encore-id="text">
+                This site is protected by reCAPTCHA & Google's<br /><a href="https://policies.google.com/privacy"
+                    target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <!-- -->and<!-- -->
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of
+                    Service</a>
+                <!-- -->apply.
+            </p>
+        </span>
+    </footer>
+
+</body>
+
+</html>

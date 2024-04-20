@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <script src="https://kit.fontawesome.com/3561a9cec8.js" crossorigin="anonymous"></script>
+
+    <title>SPOTIFY FE</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="leftside ">
+            <div class="homebox bg-gray rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" onclick="window.location.href='index.html'" src="svg/logo.svg"
+                        alt="spotify logo" />
+                </div>
+                <ul>
+                    <li style="color: #717171;"><img class="invert" src="svg/oldhomeicon.svg"
+                            onclick="window.location.href='home.html'" alt="Home">Home</img></li>
+                    <li><img class="invert" src="svg/newsearch.svg" alt="Search">Search</img></li>
+                </ul>
+            </div>
+            <div class="librarybox bg-gray rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="svg/library.svg" alt="library">
+                    <h4>Your Library</h4>
+                    <img class="invert more" src="svg/more.svg" alt="more">
+                </div>
+
+                <div class="footerr">
+                    <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Privacy
+                                Center</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy
+                                Policy</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="lang">
+                    <button onclick="openModal()" style="font-weight: bolder; margin-left: 15px; border-radius: 14px;
+                        font-size: 14px; padding: 6px 8px; color: white; background-color: #000; border: 1px solid
+                        gray;">
+                        <svg viewBox="0 0 16 16" class="invert" style="width: 25px;height:14px; margin-bottom:-2px; ">
+                            <path
+                                d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z">
+                            </path>
+                        </svg>&nbsp; English</button>
+                </div>
+                <div id="languageModal" class="modal">
+                    <div class="modal-content" style="background-color: #282828;">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="container-fluid">
+                            <div>
+                                <h2 style="color: white; font-weight: bolder;">Choose a language</h2>
+                                <p style="color: white">This updates what you read on open.spotify.com</p>
+                            </div>
+                            <hr style="width: 100%; color: #717171; margin-top: 20px;">
+                            <div class="langbtns" style="--header-height: 0;">
+                                <button class="langg">
+                                    <span data-encore-id="text">English</span>
+                                    <span style="color: #b3b3b3;">English</span>
+                                </button>
+                                <button class="langg">
+                                    <span data-encore-id="text">Afrikaans</span>
+                                    <span style="color: #b3b3b3;">Afrikaans</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">አማርኛ</span>
+                                    <span style="color: #b3b3b3;">Amharic</span>
+                                </button>
+                                <a href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">العَرَبِيَّة</span>
+                                    <span style="color: #b3b3b3;">Arabic</span>
+                                </a> <a style="font-size: 13px;" href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">عربي مصري</span>
+                                    <span style="color: #b3b3b3;">Arabic (Egypt)</span>
+                                </a> <a href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">العَرَبِيَّة مغربي</span>
+                                    <span style="color: #b3b3b3;">Arabic (Morocco)</span>
+                                </a> <a href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">العربية السعودية</span>
+                                    <span style="color: #b3b3b3;">Arabic (Saudi Arabia)</span>
+                                </a> <button class="langg">
+                                    <span data-encore-id="text">Azərbaycanca</span>
+                                    <span style="color: #b3b3b3;">Azerbaijani</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Български</span>
+                                    <span style="color: #b3b3b3;">Bulgarian</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">भोजपुरी</span>
+                                    <span style="color: #b3b3b3;">Bhojpuri</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">বাংলা</span>
+                                    <span style="color: #b3b3b3;">Bengali</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Bosanski</span>
+                                    <span style="color: #b3b3b3;">Bosnian</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Català</span>
+                                    <span style="color: #b3b3b3;">Catalan</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Čeština</span>
+                                    <span style="color: #b3b3b3;">Czech</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Densk</span>
+                                    <span style="color: #b3b3b3;">Danish</span>
+                                </button> <a href="https://open.spotify.com/intl-de" class="langg">
+                                    <span data-encore-id="text">Deutsch</span>
+                                    <span style="color: #b3b3b3;">German</span>
+                                </a> <button class="langg">
+                                    <span data-encore-id="text">Eλληνικά</span>
+                                    <span style="color: #b3b3b3;">Greek</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">English</span>
+                                    <span style="color: #b3b3b3;">United Kingdom</span>
+                                </button> <a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español de España</span>
+                                    <span style="color: #b3b3b3;">European Spanish</span>
+                                </a> <a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español de Latinoamérica</span>
+                                    <span style="color: #b3b3b3;">Latin American Spanish</span>
+                                </a><a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español (Mexico)</span>
+                                    <span style="color: #b3b3b3;">Spanish (Mexico)</span>
+                                </a> <a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español (Argentina)</span>
+                                    <span style="color: #b3b3b3;">Spanish (Argentina)</span>
+                                </a> <button class="langg">
+                                    <span data-encore-id="text">Eesti</span>
+                                    <span style="color: #b3b3b3;">Estonian</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Euskara</span>
+                                    <span style="color: #b3b3b3;">Basque</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightside bg-gray rounded">
+            <div class="header">
+                <div class="nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        color="#ffffff" fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div class="wrapper">
+                    <div class="topbar">
+                        <div class="searchbox">
+                            <form role="search" style="color: grey;"><input class=" encore-text-body-small searchicon"
+                                    maxlength="800" placeholder="What do you want to play?"
+                                    style="color: rgb(0, 0, 0);">
+                            </form>
+                            <div class="icon">
+                                <span class="iconn">
+                                    <svg class="design invert" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="buttons ">
+                    <button class="signupbtn" onclick="window.location.href='signup.html'">Sign up</button>
+                    <button class="loginbtn" onclick="window.location.href='login.html'">Log in</button>
+                </div>
+            </div>
+            <div class="playlists">
+                <div class="headerr">
+                    <span>
+                        <h2>Browse all</h2>
+                    </span>
+                </div>
+                <div class="cardContainerr">
+                    <div class="cardd">
+                        <a href="card1.html">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a81f07e1ead0317ee3c285bfa" alt="img1">
+                            <h5 class="card-title">Podcasts</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="https://open.spotify.com/concerts">
+                            <img src="https://concerts.spotifycdn.com/images/live-events_category-image.jpg" alt="img2">
+                            <h5 class="card-title">Live Events</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="	https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe" alt="img3">
+                            <h5 class="card-title">Made For You</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112" alt="img4">
+                            <h5 class="card-title">New Releases</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caff5976b97bcf10d98acbae2cd" alt="img5">
+                            <h5 class="card-title">Hindi</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67706f00000002461fda205f5f952eff8bae70" alt="img6">
+                            <h5 class="card-title">Punjabi</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caf4b3beede484da74b233fa299" alt="img1">
+                            <h5 class="card-title">Tamil</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caf666a4ae3e6161da7a120ca14" alt="img1">
+                            <h5 class="card-title">Ghazals</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://t.scdn.co/images/7262179db37c498480ef06bfacb60310.jpeg" alt="img1">
+                            <h5 class="card-title">Podcast Charts</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafb03c6f8e7efca2ae36f41b31" alt="img1">
+                            <h5 class="card-title">Love</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/9af79fd06e34dea3cd27c4e1cd6ec7343ce20af4" alt="img1">
+                            <h5 class="card-title">Video Podcasts</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67706f000000029249b35f23fb596b6f006a15" alt="img1">
+                            <h5 class="card-title">Workout</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafcbf80f8ea695536eace4fd2c" alt="img1">
+                            <h5 class="card-title">Party</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
+                                alt="img1">
+                            <h5 class="card-title">Charts</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafbca4d84993408c24bec78de8" alt="img1">
+                            <h5 class="card-title">Telugu</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafa862ab80dd85682b37c4e768" alt="img1">
+                            <h5 class="card-title">Pop</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafa1a252e3a815b65778d8c2aa" alt="img1">
+                            <h5 class="card-title">Indie</h5>
+                        </a>
+                    </div>
+                    <div class="cardd">
+                        <a href="">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caf47e942f5bea637f4f4760170" alt="img1">
+                            <h5 class="card-title">Chill</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <footer class="section-p1">
+                <div class="col">
+                    <h4>Company</h4>
+                    <a href="">About</a>
+                    <a href="">Jobs</a>
+                    <a href="">For the Record</a>
+                </div>
+                <div class="col">
+                    <h4>Communities</h4>
+                    <a href="">For Artists</a>
+                    <a href="">Developers</a>
+                    <a href="">Advertising</a>
+                    <a href="">Investors</a>
+                    <a href="contact.html">Vendors</a>
+                </div>
+                <div class="col">
+                    <h4>Useful Links</h4>
+                    <a href="login.html">Support</a>
+                    <a href="">Free Mobile App</a>
+                </div>
+                <div class="col">
+                    <h4>Spotify Plans</h4>
+                    <a href="login.html">Premium Individual</a>
+                    <a href="">Premium Duo</a>
+                    <a href="login.html">Premium Family</a>
+                    <a href="">Premium Student</a>
+                    <a href="login.html">Spotify Free</a>
+                </div>
+                <div class="col">
+                    <h4>Follow us</h4>
+                    <span>
+                        <i class="fa-brands fa-x-twitter"></i>&nbsp;
+                        <i class="fa-brands fa-facebook-f"></i>&nbsp;
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+            </footer>
+            <p class="copyright">© 2024 Spotify AB</p>
+        </div>
+
+
+
+        <!-- <div class="playmusic">
+            <div class="songinfo"></div>
+            <div class="songbtn">
+                <img src="previous.svg" alt="previous">
+                <img src="play.svg" alt="play">
+                <img src="next.svg" alt="next">
+            </div>
+            <div class="songtime"></div>
+        </div> -->
+    </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

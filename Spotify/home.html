@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <script src="https://kit.fontawesome.com/3561a9cec8.js" crossorigin="anonymous"></script>
+
+    <title>Spotify - Home</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="leftside ">
+            <div class="homebox bg-gray rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" onclick="window.location.href='index.html'" src="svg/logo.svg"
+                        alt="spotify logo" />
+                </div>
+                <ul style="cursor: pointer;">
+                    <li><img class="invert" src="svg/home.svg" alt="Home">Home</img></li>
+                    <li style="color: #717171;"><img class="invert" src="svg/search.svg" alt="Search"
+                            onclick="window.location.href= 'search.html'">Search</img></li>
+                </ul>
+            </div>
+            <div class="librarybox bg-gray rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="svg/library.svg" alt="library">
+                    <h4>Your Library</h4>
+                    <img class="invert more" src="svg/more.svg" alt="more">
+                </div>
+
+                <div class="footerr">
+                    <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Privacy
+                                Center</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy
+                                Policy</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="lang">
+                    <button onclick="openModal()" style="font-weight: bolder; margin-left: 15px; border-radius: 14px;
+                        font-size: 14px; padding: 6px 8px; color: white; background-color: #000; border: 1px solid
+                        gray;">
+                        <svg viewBox="0 0 16 16" class="invert" style="width: 25px;height:14px; margin-bottom:-2px; ">
+                            <path
+                                d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z">
+                            </path>
+                        </svg>&nbsp; English</button>
+                </div>
+                <div id="languageModal" class="modal">
+                    <div class="modal-content" style="background-color: #282828;">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="container-fluid">
+                            <div>
+                                <h2 style="color: white; font-weight: bolder;">Choose a language</h2>
+                                <p style="color: white">This updates what you read on open.spotify.com</p>
+                            </div>
+                            <hr style="width: 100%; color: #717171; margin-top: 20px;">
+                            <div class="langbtns" style="--header-height: 0;">
+                                <button class="langg">
+                                    <span data-encore-id="text">English</span>
+                                    <span style="color: #b3b3b3;">English</span>
+                                </button>
+                                <button class="langg">
+                                    <span data-encore-id="text">Afrikaans</span>
+                                    <span style="color: #b3b3b3;">Afrikaans</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">አማርኛ</span>
+                                    <span style="color: #b3b3b3;">Amharic</span>
+                                </button>
+                                <a href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">العَرَبِيَّة</span>
+                                    <span style="color: #b3b3b3;">Arabic</span>
+                                </a> <a style="font-size: 13px;" href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">عربي مصري</span>
+                                    <span style="color: #b3b3b3;">Arabic (Egypt)</span>
+                                </a> <a href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">العَرَبِيَّة مغربي</span>
+                                    <span style="color: #b3b3b3;">Arabic (Morocco)</span>
+                                </a> <a href="https://open.spotify.com/intl-ar" class="langg">
+                                    <span data-encore-id="text">العربية السعودية</span>
+                                    <span style="color: #b3b3b3;">Arabic (Saudi Arabia)</span>
+                                </a> <button class="langg">
+                                    <span data-encore-id="text">Azərbaycanca</span>
+                                    <span style="color: #b3b3b3;">Azerbaijani</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Български</span>
+                                    <span style="color: #b3b3b3;">Bulgarian</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">भोजपुरी</span>
+                                    <span style="color: #b3b3b3;">Bhojpuri</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">বাংলা</span>
+                                    <span style="color: #b3b3b3;">Bengali</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Bosanski</span>
+                                    <span style="color: #b3b3b3;">Bosnian</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Català</span>
+                                    <span style="color: #b3b3b3;">Catalan</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Čeština</span>
+                                    <span style="color: #b3b3b3;">Czech</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Densk</span>
+                                    <span style="color: #b3b3b3;">Danish</span>
+                                </button> <a href="https://open.spotify.com/intl-de" class="langg">
+                                    <span data-encore-id="text">Deutsch</span>
+                                    <span style="color: #b3b3b3;">German</span>
+                                </a> <button class="langg">
+                                    <span data-encore-id="text">Eλληνικά</span>
+                                    <span style="color: #b3b3b3;">Greek</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">English</span>
+                                    <span style="color: #b3b3b3;">United Kingdom</span>
+                                </button> <a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español de España</span>
+                                    <span style="color: #b3b3b3;">European Spanish</span>
+                                </a> <a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español de Latinoamérica</span>
+                                    <span style="color: #b3b3b3;">Latin American Spanish</span>
+                                </a><a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español (Mexico)</span>
+                                    <span style="color: #b3b3b3;">Spanish (Mexico)</span>
+                                </a> <a href="https://open.spotify.com/intl-es" class="langg">
+                                    <span data-encore-id="text">Español (Argentina)</span>
+                                    <span style="color: #b3b3b3;">Spanish (Argentina)</span>
+                                </a> <button class="langg">
+                                    <span data-encore-id="text">Eesti</span>
+                                    <span style="color: #b3b3b3;">Estonian</span>
+                                </button> <button class="langg">
+                                    <span data-encore-id="text">Euskara</span>
+                                    <span style="color: #b3b3b3;">Basque</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightside bg-gray rounded ">
+            <div class="header">
+                <div class="nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="buttons ">
+                    <button class="signupbtn" onclick="window.location.href='signup.html'">Sign up</button>
+                    <button class="loginbtn" onclick="window.location.href='login.html'">Log in</button>
+                </div>
+            </div>
+            <div class="playlists">
+                <div class="headerr">
+                    <span>
+                        <a href="#" style="text-decoration: none; color: white; font-weight: 700;">
+                            <h3 style="margin-left: 6px; margin-top: 20px;">Popular artists</h3>
+                        </a>
+                    </span>
+                    <a href="#" style="font-size: 13px; color: white; margin-right: -39px;">Show All</a>
+                </div>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img style="border-radius: 50%;"
+                            src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="img1">
+                        <a href="#" style="font-size: 13px; color: white; text-decoration: none;">Pritam</a>
+                        <h6 style="color: #a7a7a7;">Artist</h6>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img style="border-radius: 50%;"
+                            src="data:image/webp;base64,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"
+                            alt="img2">
+                        <a href="#" style="font-size: 13px; color: white; text-decoration: none;">Arijit Singh</a>
+                        <h6 style="color: #a7a7a7;">Artist</h6>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img style="border-radius: 50%;"
+                            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSS7XncEg9LYXni7u8epBmhEHwXfC4TIZd5UvrSK28jDGRm-m8iK_rSdg214Pm_Y6T0MJ4_cjWBWTNjY9t6cwHsDIpAwEDejZKu7XnPD-Y"
+                            alt="img3">
+                        <a href="#" style="font-size: 13px; color: white; text-decoration: none;">Vishal Mishra</a>
+                        <h6 style="color: #a7a7a7;">Artist</h6>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img style="border-radius: 50%;"
+                            src="	https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="img1">
+                        <a href="#" style="font-size: 13px; color: white; text-decoration: none;">A.R.Rahman</a>
+                        <h6 style="color: #a7a7a7;">Artist</h6>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img style="border-radius: 50%;"
+                            src="	https://i.scdn.co/image/ab67616100005174fc7c542c04b5f7dc8f1b1c16" alt="img1">
+                        <a href="#" style="font-size: 13px; color: white; text-decoration: none;">Anirudh
+                            Ravichander</a>
+                        <h6 style="color: #a7a7a7;">Artist</h6>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img style="border-radius: 50%;"
+                            src="	https://i.scdn.co/image/ab67616100005174a038d7d87f8577bbb9686bd3" alt="img1">
+                        <a href="#" style="font-size: 13px; color: white; text-decoration: none;">Sachin-Jigar</a>
+                        <h6 style="color: #a7a7a7;">Artist</h6>
+                    </div>
+                </div>
+                <br>
+                <div class="headerr">
+                    <span>
+                        <a href="#" style="text-decoration: none; color: white; font-weight: 700;">
+                            <h3 style="margin-left: 6px; margin-top: 20px;">Popular albums</h3>
+                        </a>
+                    </span>
+                    <a href="#" style="font-size: 13px; color: white; margin-right: -39px;">Show All</a>
+                </div>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="	https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="img1">
+                        <h4>ANIMAL</h4>
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Manan Bharadwaj
+                        </a>, <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Vishal
+                            Mishra
+                        </a>,
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Jaani
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e021a8c4618eda885a406958dd0" alt="img1">
+                        <h4>Still Rollin!</h4>
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Shubh
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e029bb2d30b01ac2cada8a8ad03" alt="img1">
+                        <h4>Ek Tha Raja</h4>
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Badshah
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e021d1cc2e40d533d7bcebf5dae" alt="img2">
+                        <h4>Moosetape</h4>
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Sidhu Moose Wala
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="	https://i.scdn.co/image/ab67616d00001e020d3449f333a83a25feb423f8" alt="img3">
+                        <h4>Husn</h4>
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Anuv Jain
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="	https://i.scdn.co/image/ab67616d00001e02bb25239324c4e16ae01fda36" alt="img1">
+                        <h4>Making Memories</h4>
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Karan Aujla
+                        </a>,
+                        <a href="#" style=" text-decoration: none;  font-size: 14px; color: #717171;">Ikky
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <div class="headerr">
+                    <span>
+                        <h3>Spotify Playlists</h3>
+                    </span>
+                    <a href="#" style="font-size: 13px; color: white; margin-right: -39px;">Show All</a>
+                </div>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="img1">
+                        <h4>Happy Hits!</h4>
+                        <p style="font-size: 14px; color: #717171;">Hits to boost your mood & fill you with
+                            happiness!
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="img2">
+                        <h4>lofi beats</h4>
+                        <p style="font-size: 14px; color: #717171;">chill beats, lofi vibes, new tracks every
+                            week...
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f000000023386614f0885feec7bc6bfc5" alt="img3">
+                        <h4>Today's Top Hits</h4>
+                        <p style="font-size: 14px; color: #717171;">Dua Lipa is on top of the Hottest 50!</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                    color="#000000" fill="#000000">
+                                    <path
+                                        d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="	https://i.scdn.co/image/ab67706f000000024a99427709cda972f6a8d932" alt="img1">
+                        <h4>Pop Rising</h4>
+                        <p style="font-size: 14px; color: #717171;">Who's now and next in pop. Cover: Chappell Roan
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="section-p1">
+                <div class="col">
+                    <h4>Company</h4>
+                    <a href="">About</a>
+                    <a href="">Jobs</a>
+                    <a href="">For the Record</a>
+                </div>
+                <div class="col">
+                    <h4>Communities</h4>
+                    <a href="">For Artists</a>
+                    <a href="">Developers</a>
+                    <a href="">Advertising</a>
+                    <a href="">Investors</a>
+                    <a href="contact.html">Vendors</a>
+                </div>
+                <div class="col">
+                    <h4>Useful Links</h4>
+                    <a href="login.html">Support</a>
+                    <a href="">Free Mobile App</a>
+                </div>
+                <div class="col">
+                    <h4>Spotify Plans</h4>
+                    <a href="login.html">Premium Individual</a>
+                    <a href="">Premium Duo</a>
+                    <a href="login.html">Premium Family</a>
+                    <a href="">Premium Student</a>
+                    <a href="login.html">Spotify Free</a>
+                </div>
+                <div class="col">
+                    <h4>Follow us</h4>
+                    <span>
+                        <i class="fa-brands fa-x-twitter"></i>&nbsp;
+                        <i class="fa-brands fa-facebook-f"></i>&nbsp;
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+            </footer>
+            <p class="copyright">© 2024 Spotify AB</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
